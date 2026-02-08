@@ -1,11 +1,10 @@
 class Solution {
     public boolean isPowerOfThree(int n) {
-        if (n <= 0) return false;
-
-        long val = 1;
-        while (val < n) {
-            val *= 3;
+        for(long i=0;i<=(int)(Math.sqrt(n));i++)
+        {
+            if((long)(Math.pow(3,i))==n)
+            return true;
         }
-        return val == n;
+        return false;
     }
 }
